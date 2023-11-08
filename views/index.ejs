@@ -8,10 +8,12 @@
       <h2>All Blogs</h2>
 
       <% if(blogs.length>0){ %> <% blogs.forEach(blog => { %>
-      <h3 class="title"><%= blog.title %></h3>
-      <p class="snippet"><%= blog.snippet %></p>
-      <% }) %> <% } else{ %>
-      <p>There are no blogs to display...</p>
+      <a href="/blogs/<%= blog._id %>" class="single">
+        <h3 class="title"><%= blog.title %></h3>
+        <p class="snippet"><%= blog.snippet %></p>
+        <% }) %> <% } else{ %>
+        <p>There are no blogs to display...</p></a
+      >
       <% } %>
     </div>
     <%- include('./partials/footer.ejs') %>
